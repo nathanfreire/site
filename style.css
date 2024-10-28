@@ -3,6 +3,14 @@
 /* Importação de font (google fontes) */
 @import url('https://fonts.googleapis.com/css2?family=Arima:wght@100..700&display=swap');
 
+/* Variáveis */
+:root {
+    --azul: #ADD8E6;
+    --roxo: #4169E1;
+    --branco: #FFF;
+    --preto: #000;
+}
+
 /* CSS Reset (compatibilizar com todos navegadores)*/
 * {
     margin: 0;
@@ -24,14 +32,54 @@ body {
 /* Cabeçalho */
 header {
     height: 100px;
-    background-color: blueviolet;
+    background-color:#87CEEB;
 }
 #logo img {
-    width:80px;
-    height: 80px;
+    width:90px;
+    height: 85px;
     margin: 10px 0px 0px 0px;
-   
 }
+
+#check {
+    display: none;
+}
+
+/* Efeito de deslizar o menu */
+/* Se check estiver "ticado", criar um estilo para ul */
+#check:checked~ul {
+    right: 0;
+} 
+
+label {
+    font-size: 3em;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    color: rgba(0,0,0,0.5); /* 0.5 = 50% transparencia (0 a 1 (100%) */
+}
+
+nav ul {
+    height: 100vh;  /* 100vh = 100% altura da tela*/
+    background-color: var(--azul);
+    list-style: none; /* Revover bullets */
+    width: 55%;
+    position: fixed;
+    top: 100px;
+    right: -55%;
+    transition: all 0.5s;
+}
+
+nav ul li {
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--branco);
+    text-align: right;
+}
+
+nav ul li a {
+    color: var(--preto);
+    text-decoration: none; /* remover o sublinhado */
+}
+
 /*/
 
 /* Smartphone Landscape */
@@ -41,9 +89,44 @@ header {
         margin: 10px 0px 0px 0px; 
     }
    .container{
-        max-width: 540px;
-        background-color: blueviolet;
+        max-width: 570px;
+        background-color: #87CEEB;
    }
+
+   /* esperimento */
+   #check {
+    display: none;
+}
+#check:checked~ul {
+    right: 0;
+} 
+label {
+    font-size: 3em;
+    position: fixed;
+    top: 15px;
+    right: 65px;
+    color: rgba(0,0,0,0.5); /* 0.5 = 50% transparencia (0 a 1 (100%) */
+}
+
+
+
+   nav ul {
+    height: 100vh;  /* 100vh = 100% altura da tela*/
+    background-color: var(--azul);
+    list-style: none; /* Revover bullets */
+    width: 70%;
+    position: fixed;
+    top: 100px;
+    left: 152px;
+    right: -70%;
+    transition: all 0.5s;
+}
+
+
+
+
+
+
 }
 
 /*/
@@ -53,10 +136,10 @@ header {
     /* cabeçalho */
     .container {
         max-width: 720px;
-        background-color: blueviolet;
+        background-color: #87CEEB;
     }
     header {
-        height: 120px;
+        height: 110px;
     }
     #logo img {
         width: 100px;
@@ -71,7 +154,7 @@ header {
     /* cabeçalho */
     .container{
         max-width: 960px;
-        background-color: blueviolet;
+        background-color: #87CEEB;
     }
     #logo img {
         width: 110px;
@@ -87,7 +170,7 @@ header {
     /* cabeçalho */
     .container{
         max-width: 1240px;
-        background-color: blueviolet;
+        background-color: #87CEEB;
     }
     header{
         height: 150px;
@@ -107,7 +190,7 @@ header {
     /* cabeçalho */
     .container{
         max-width: 1360;
-        background-color: rgb(165, 98, 228);
+        background-color:(#87CEEB);
     }
     header{
         height: 200px;
