@@ -9,6 +9,7 @@
     --roxo: #4169E1;
     --branco: #FFF;
     --preto: #000;
+    --vermelho: #ff0000;
 }
 
 /* CSS Reset (compatibilizar com todos navegadores)*/
@@ -21,21 +22,42 @@
 /* Layout */
 body {
     font-family: "Arima", serif;
-    font-size: 1em; /* 1em = 100% (tamanho padrão) */
+    font-size: 1em;
+    /* 1em = 100% (tamanho padrão) */
 }
 
-.container{
-    margin: 0 auto; /* centralizar o bloco */
+.container {
+    margin: 0 auto;
+    /* centralizar o bloco */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* Smartphone Portrait */
+.botao {
+    text-decoration: none;
+    color:var(--preto);
+    font-size: 1.3em;
+    font-weight: 700;
+    background-color:var(--azul);
+    width: 160px;
+    padding: 11px 0px;
+    border: 2px solid var(--preto);
+    border-radius: 25px;
+    align-self: center;
+    margin-top: 20px;
+
+}
+
+/* Smartphone Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 /* Cabeçalho */
 header {
     height: 100px;
-    background-color:#87CEEB;
+   /* background-color: #87CEEB; */
 }
+
 #logo img {
-    width:90px;
+    width: 90px;
     height: 85px;
     margin: 10px 0px 0px 0px;
 }
@@ -48,20 +70,23 @@ header {
 /* Se check estiver "ticado", criar um estilo para ul */
 #check:checked~ul {
     right: 0;
-} 
+}
 
 label {
     font-size: 3em;
     position: fixed;
     top: 15px;
     right: 15px;
-    color: rgba(0,0,0,0.5); /* 0.5 = 50% transparencia (0 a 1 (100%) */
+    color: rgba(0, 0, 0, 0.5);
+    /* 0.5 = 50% transparencia (0 a 1 (100%) */
 }
 
 nav ul {
-    height: 100vh;  /* 100vh = 100% altura da tela*/
+    height: 100vh;
+    /* 100vh = 100% altura da tela*/
     background-color: var(--azul);
-    list-style: none; /* Revover bullets */
+    list-style: none;
+    /* Revover bullets */
     width: 55%;
     position: fixed;
     top: 100px;
@@ -77,73 +102,76 @@ nav ul li {
 
 nav ul li a {
     color: var(--preto);
-    text-decoration: none; /* remover o sublinhado */
+    text-decoration: none;
+    /* remover o sublinhado */
+}
+
+/* Banner */
+main {
+    height: 60vh; /* ajuste e largura do banner*/
+    background: url(img/barbearia.jpeg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+main h1, h2 {
+    color:var(--branco);
+    text-shadow: #000 0.05em 0.05em 0.05em; /* efeito de sombra*/
+}
+
+main h1{
+    font-size: 3em;
+}
+
+main h2{
+    font-size: 1.6em;
+    margin-top: 30px;
 }
 
 /*/
 
 /* Smartphone Landscape */
 @media (min-width: 576px) {
+
     /* Cabeçalho */
     #logo img {
-        margin: 10px 0px 0px 0px; 
+        margin: 10px 0px 0px 0px;
     }
-   .container{
+
+    .container {
         max-width: 570px;
-        background-color: #87CEEB;
-   }
-
-   /* esperimento */
-   #check {
-    display: none;
-}
-#check:checked~ul {
-    right: 0;
-} 
-label {
-    font-size: 3em;
-    position: fixed;
-    top: 15px;
-    right: 65px;
-    color: rgba(0,0,0,0.5); /* 0.5 = 50% transparencia (0 a 1 (100%) */
-}
-
-
-
-   nav ul {
-    height: 100vh;  /* 100vh = 100% altura da tela*/
-    background-color: var(--azul);
-    list-style: none; /* Revover bullets */
-    width: 70%;
-    position: fixed;
-    top: 100px;
-    left: 152px;
-    right: -70%;
-    transition: all 0.5s;
-}
-
-
-
-
-
-
+      /*  background-color: #87CEEB; */
+    }
 }
 
 /*/
 
 /* Tablet Portrait */
 @media (min-width: 768px) {
+
     /* cabeçalho */
     .container {
         max-width: 720px;
-        background-color: #87CEEB;
+       /* background-color: #87CEEB; */
     }
+
     header {
         height: 110px;
     }
+
     #logo img {
         width: 100px;
         height: 100px;
+    }
+
+    nav ul {
+        top: 110px;
+        width: 50%;
+        right: -50%;
     }
 }
 
@@ -151,53 +179,89 @@ label {
 
 /* Tablet Landscape */
 @media (min-width: 992px) {
+
     /* cabeçalho */
-    .container{
+    .container {
         max-width: 960px;
-        background-color: #87CEEB;
+      /*  background-color: #87CEEB; */
     }
+
     #logo img {
         width: 110px;
         height: 100px;
     }
-   
+
 }
 
 /*/
 
 /* PCs / Notebooks */
 @media (min-width: 1200px) {
-    /* cabeçalho */
-    .container{
-        max-width: 1240px;
-        background-color: #87CEEB;
+    .container {
+        max-width: 1440px;
+       /* background-color: #87CEEB; */
+        /* cabeçalho */
     }
-    header{
+
+    header {
         height: 150px;
     }
+
     #logo img {
         width: 140px;
         height: 140px;
     }
-   
-   
+
+    /* transformação do menu */
+    label {
+        display: none;
+    }
+
+    nav ul {
+        width: 100%;
+        height: auto;
+        position: static;
+        background-color: transparent;
+        /* remover a cor do backcolor*/
+    }
+
+    nav ul li {
+        float: left;
+        border: 0;
+    }
+
+    nav ul li {
+        color: var(--azul)
+    }
+
+    nav ul li a:hover {
+        color: var(--vermelho);
+    }
+
+
 }
+
+
+
 
 /*/
 
 /* Telas FullHD / 4k / SmartTV */
 @media (min-width: 1400px) {
+
     /* cabeçalho */
-    .container{
+    .container {
         max-width: 1360;
-        background-color:(#87CEEB);
+      /*  background-color: (#87CEEB); */
     }
-    header{
+
+    header {
         height: 200px;
     }
+
     #logo img {
         width: 176px;
         height: 176px;
     }
-    
+
 }
