@@ -19,27 +19,31 @@
     border: 0;
 }
 
-/* Layout */
+
+
+
+/* Layout >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 body {
-    font-family: "Arima", serif;
+    font-family: "Arima", sans-serif;
     font-size: 1em;
     /* 1em = 100% (tamanho padrão) */
+    background-color: var(--preto);
 }
 
 .container {
     margin: 0 auto;
     /* centralizar o bloco */
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    /*justify-content: space-between;*/
+    /*align-items: center;*/
 }
 
 .botao {
     text-decoration: none;
-    color:var(--preto);
+    color: var(--preto);
     font-size: 1.3em;
     font-weight: 700;
-    background-color:var(--azul);
+    background-color: var(--azul);
     width: 160px;
     padding: 11px 0px;
     border: 2px solid var(--preto);
@@ -49,11 +53,13 @@ body {
 
 }
 
+/* FIM DO LAYOUT<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+
 /* Smartphone Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-/* Cabeçalho */
+/************ Cabeçalho ***********/
 header {
     height: 100px;
-   /* background-color: #87CEEB; */
+    background-color: #b0cddf;
 }
 
 #logo img {
@@ -106,10 +112,13 @@ nav ul li a {
     /* remover o sublinhado */
 }
 
-/* Banner */
+
+
+/******** Banner *********/
 main {
-    height: 60vh; /* ajuste e largura do banner*/
-    background: url(img/barbearia.jpeg);
+    height: 60vh;
+    /* ajuste e largura do banner*/
+    background: url(img/banner\ fixo.jpg);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -118,23 +127,84 @@ main {
     text-align: center;
 }
 
-main h1, h2 {
-    color:var(--branco);
-    text-shadow: #000 0.05em 0.05em 0.05em; /* efeito de sombra*/
+main h1,
+h2 {
+    color: var(--branco);
+    text-shadow: #000 0.05em 0.05em 0.05em;
+    /* efeito de sombra*/
 }
 
-main h1{
+main h1 {
     font-size: 3em;
 }
 
-main h2{
+main h2 {
     font-size: 1.6em;
+    margin-top: 30px;
+    font-weight: 800;
+}
+
+/******** Destaque **********/
+#destaque {
+    background: url(img/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    /* Espaçamento para não encostar na borda do dispositivo */
+    padding: 50px 15px;
+}
+
+/* Atenção!!! Organizando o conteiner após o destaque, o estilo é aplicado apenas ao container da seçao de destaque*/
+#destaque .container {
+    flex-direction: column;
+    align-items: center;
+}
+
+/*para esconder a imagem usamos display: nome no container da imagem | para exibir novamente em telas maiores, usamos "display: block" */
+/*#imagemDestaque{
+    display: none;
+}*/
+#imagemDestaque img {
+    width: 250px;
+    height: 200px;
+    /* Arredondar uma imagem quadrada */
+    border-radius: 50%;
+
+}
+
+#textoDestaque {
+    color: var(--branco);
+}
+
+#textoDestaque h2 {
+    margin-bottom: 30px;
+}
+
+/* Atenção!!! Detalhe do sinal ">" ref. ao elemento imediato */
+#textoDestaque>p {
+    color: var(--azul);
+    margin-bottom: 25px;
+}
+
+.topicos {
+    display: flex;
+    align-items: center;
     margin-top: 30px;
 }
 
-/*/
+.topicos img {
+    margin-right: 20px;
+}
 
-/* Smartphone Landscape */
+.topicos {
+    font-weight: 600;
+}
+
+/* FIM DO SMARTPHONE PORTRAIT*/
+
+
+
+
+/* Smartphone Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width: 576px) {
 
     /* Cabeçalho */
@@ -143,20 +213,34 @@ main h2{
     }
 
     .container {
-        max-width: 570px;
-      /*  background-color: #87CEEB; */
+        max-width: 670px;
+        /*  background-color: #87CEEB; */
+    }
+
+    /********* Destaque **********/
+    #destaque .container {
+        flex-direction: row;
+    }
+
+    #imagemDestaque {
+        margin-right: 50px;
+    }
+
+    #imagemDestaque img {
+        width: 230px;
+        height: 200px;
     }
 }
 
-/*/
+/*FIM SMARTPHONE LANDSCAPE*/
 
 /* Tablet Portrait */
 @media (min-width: 768px) {
 
-    /* cabeçalho */
+    /****** cabeçalho *******/
     .container {
-        max-width: 720px;
-       /* background-color: #87CEEB; */
+        max-width: 770px;
+        /* background-color: #87CEEB; */
     }
 
     header {
@@ -166,6 +250,7 @@ main h2{
     #logo img {
         width: 100px;
         height: 100px;
+        margin: 10px 0px 0px 0px;
     }
 
     nav ul {
@@ -176,41 +261,54 @@ main h2{
 
     /* Banner */
 
-    main h1{
+    main h1 {
         font-size: 4em;
     }
-    
-    main h2{
+
+    main h2 {
         font-size: 2.5em;
         margin-top: 30px;
     }
+
+    /***** Destaque *****/
+    #imagemDestaque img {
+        width: 240px;
+        height: 240px;
+    }
 }
 
-/*/
+/*FIM*/
+
+
+
 
 /* Tablet Landscape */
 @media (min-width: 992px) {
 
     /* cabeçalho */
     .container {
-        max-width: 960px;
-      /*  background-color: #87CEEB; */
+        max-width: 1030px;
+        /*  background-color: #87CEEB; */
+        
     }
 
     #logo img {
         width: 110px;
         height: 100px;
+        margin: 10px 0px 0px 0px;
     }
 
 }
 
-/*/
+/*FIM*/
 
 /* PCs / Notebooks */
 @media (min-width: 1200px) {
     .container {
-        max-width: 1440px;
-       /* background-color: #87CEEB; */
+        max-width: 1640px;
+        justify-content: space-around;
+        align-items: center;
+        /*  background-color: #87CEEB; */
         /* cabeçalho */
     }
 
@@ -249,30 +347,35 @@ main h2{
         color: var(--vermelho);
     }
 
-    main h1{
+    main h1 {
         font-size: 6em;
     }
-    
-    main h2{
+
+    main h2 {
         font-size: 3.5em;
         margin-top: 30px;
     }
-
-
+/*********** Destaque ***********/
+     #destaque {
+        /***** Destaque *****/
+    #imagemDestaque img {
+        width: 440px;
+        height: 440px;
+    }
+        /* O código abaixo fixa o banner (efeito parallax) */
+        background-attachment: fixed;
+     }
 }
 
-
-
-
-/*/
+/*FIM*/
 
 /* Telas FullHD / 4k / SmartTV */
 @media (min-width: 1400px) {
 
-    /* cabeçalho */
+    /***** cabeçalho ******/
     .container {
         max-width: 1360;
-      /*  background-color: (#87CEEB); */
+        /*  background-color: (#87CEEB); */
     }
 
     header {
@@ -285,3 +388,5 @@ main h2{
     }
 
 }
+
+/*FIM*/
