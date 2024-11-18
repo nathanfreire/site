@@ -195,14 +195,41 @@ main h2 {
     margin-right: 20px;
 }
 
-.topicos {
+.topicos p {
     font-weight: 600;
+}
+
+/********* Sobre ***********/
+
+/*o estilo abaixo será aplicado apenas ao container qeu está subordinado a section "Sobre"*/
+#sobre .container {
+    flex-direction: column;
+}
+
+#sobre {
+    padding: 50px 15px;
+}
+
+#sobre h2,
+p {
+    color: var(--branco);
+}
+
+#sobre h2 {
+    margin-bottom: 20px;
+}
+
+#sobre p {
+    margin-bottom: 20px;
+}
+
+#video iframe {
+    width: 340px;
+    height: 191px;
 }
 
 
 /* FIM DO SMARTPHONE PORTRAIT*/
-
-
 
 
 /* Smartphone Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
@@ -232,6 +259,14 @@ main h2 {
         width: 200px;
         height: 200px;
     }
+
+    /********* Sobre **********/
+    #video iframe {
+        width: 560px;
+        height: 315px;
+    }
+
+
 }
 
 /*FIM SMARTPHONE LANDSCAPE*/
@@ -243,6 +278,7 @@ main h2 {
     .container {
         max-width: 770px;
         /* background-color: #87CEEB; */
+
     }
 
     header {
@@ -278,7 +314,8 @@ main h2 {
         height: 300px;
         margin-left: 30px;
     }
-    #textoDestaque h2{
+
+    #textoDestaque h2 {
         font-size: 2em;
     }
 }
@@ -295,7 +332,7 @@ main h2 {
     .container {
         max-width: 1030px;
         /*  background-color: #87CEEB; */
-        
+
     }
 
     #logo img {
@@ -303,6 +340,7 @@ main h2 {
         height: 100px;
         margin: 10px 0px 0px 0px;
     }
+
     #imagemDestaque {
         margin-right: 70px;
         margin-top: 70px;
@@ -371,17 +409,31 @@ main h2 {
         font-size: 3.5em;
         margin-top: 30px;
     }
-/*********** Destaque ***********/
-     #destaque {
+
+    /*********** Destaque ***********/
+    /*   #destaque {
+
         /***** Destaque *****/
     #imagemDestaque img {
         width: 440px;
         height: 440px;
-    }
+
+
         /* O código abaixo fixa o banner (efeito parallax) */
         background-attachment: fixed;
-     }
+    }
 }
+
+/******sobre******/
+#sobre .container {
+    flex-direction: row;
+    align-items: center;
+}
+
+#video iframe {
+    margin: 0;
+}
+
 
 /*FIM*/
 
@@ -390,7 +442,7 @@ main h2 {
 
     /***** cabeçalho ******/
     .container {
-        max-width: 1360;
+        max-width: 1360px;
         /*  background-color: (#87CEEB); */
     }
 
