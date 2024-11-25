@@ -139,8 +139,8 @@ main h1 {
 }
 
 main h2 {
-    font-size: 1.6em;
-    margin-top: 30px;
+    font-size: 2em;
+    margin-top: 20px;
     font-weight: 800;
 }
 
@@ -150,7 +150,7 @@ main h2 {
     background-size: cover;
     background-position: center;
     /* Espaçamento para não encostar na borda do dispositivo */
-    padding: 50px 15px;
+    padding: 90px 15px;
 }
 
 /* Atenção!!! Organizando o conteiner após o destaque, o estilo é aplicado apenas ao container da seçao de destaque*/
@@ -172,31 +172,43 @@ main h2 {
 }
 
 #textoDestaque {
+    font-size: 1em;
     color: var(--branco);
+    text-align: center;
+    
+    
 }
 
 #textoDestaque h2 {
+    font-size: 2em;
     margin-bottom: 30px;
+    text-align: center;
+
 }
 
 /* Atenção!!! Detalhe do sinal ">" ref. ao elemento imediato */
 #textoDestaque>p {
-    color: var(--azul);
+    color: var(--preto);
+    font-size: 1.7em;
     margin-bottom: 25px;
+    
 }
 
 .topicos {
     display: flex;
     align-items: center;
     margin-top: 30px;
+    text-align: center;
 }
 
 .topicos img {
     margin-right: 20px;
+    margin-left: 50px;  
 }
 
 .topicos p {
     font-weight: 600;
+    color: #000;
 }
 
 /********* Sobre ***********/
@@ -208,6 +220,9 @@ main h2 {
 
 #sobre {
     padding: 50px 15px;
+    display: flex;
+    flex-direction: column;
+    background-color:  #808080;
 }
 
 #sobre h2,
@@ -224,7 +239,7 @@ p {
 }
 
 #video iframe {
-    width: 200px;
+    width: 100%;
     height: 191px;
 }
 
@@ -260,6 +275,10 @@ p {
         height: 200px;
     }
 
+    .topicos img {
+        margin-right: 20px;
+        margin-left: 170px;  
+    }
     /********* Sobre **********/
     #video iframe {
         width: 560px;
@@ -352,6 +371,10 @@ p {
         height: 380px;
     }
 
+    .topicos img {
+        margin-right: 20px;
+        margin-left: 350px;  
+
 }
 
 /*FIM*/
@@ -422,9 +445,13 @@ p {
         /* O código abaixo fixa o banner (efeito parallax) */
         background-attachment: fixed;
     }
-}
 
-/******sobre******/
+    .topicos img {
+        margin-right: 20px;
+        margin-left: 350px;
+    }
+
+    /******sobre******/
 #sobre .container {
     flex-direction: row;
     align-items: center;
@@ -433,6 +460,9 @@ p {
 #video iframe {
     margin: 0;
 }
+}
+
+
 
 
 /*FIM*/
