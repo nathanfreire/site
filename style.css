@@ -266,6 +266,15 @@ p {
     height: 256px;
 }
 
+#textoFaixa h2{
+    color: var(--roxo);
+    margin-bottom: 15px;
+}
+
+#textoFaixa p{
+    margin-bottom: 50px;
+}
+
 
 /* FIM DO SMARTPHONE PORTRAIT*/
 
