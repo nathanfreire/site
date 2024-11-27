@@ -149,6 +149,7 @@ main h2 {
     background: url(img/fundo4.png);
     background-size: cover;
     background-position: center;
+    /*background-attachment: fixed;*/
     /* Espaçamento para não encostar na borda do dispositivo */
     padding: 90px 15px;
 }
@@ -246,6 +247,23 @@ p {
 #video iframe {
     width: 100%;
     height: 191px;
+}
+
+/************** Faixa de destaque ********/
+#faixaDestaque{
+    background: url(img/fundo4.png);
+    background-size: cover;
+    background-position: center;
+    padding: 50px 15px;
+}
+
+#faixaDestaque .container{
+    flex-direction: column;
+}
+
+#imagemFaixa img{
+    width: 256px;
+    height: 256px;
 }
 
 
@@ -460,6 +478,18 @@ p {
             background-attachment: fixed;
         }
 
+
+        /******** Destaque **********/
+#destaque {
+    background: url(img/fundo4.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* Espaçamento para não encostar na borda do dispositivo */
+    padding: 90px 15px;
+}
+
+
         .topicos img {
             margin-right: 20px;
             margin-left: 350px;
@@ -475,6 +505,20 @@ p {
             margin: 0px 0px 0px 20px;
         }
 
+        /***** Faixa de destaque *****/
+        #faixaDestaque{
+            background-attachment: fixed;
+        }
+
+        #faixaDestaque .container{
+            flex-direction: row-reverse;
+            align-items: center;
+        }
+
+        #imagemFaixa img{
+            width: 320px;
+            height: 320px;
+        }
 
         
     }
