@@ -44,14 +44,14 @@ body {
     font-size: 1.3em;
     font-weight: 700;
     background-color: var(--azul);
-    width: 160px;
-    padding: 11px 0px;
+    width: 200px;
+    padding: 10px 20px;
     border: 2px solid var(--preto);
     border-radius: 25px;
     align-self: center;
     margin-top: 20px;
-
 }
+
 
 /* FIM DO LAYOUT<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 
@@ -175,8 +175,8 @@ main h2 {
     font-size: 1em;
     color: var(--branco);
     text-align: center;
-    
-    
+
+
 }
 
 #textoDestaque h2 {
@@ -188,10 +188,11 @@ main h2 {
 
 /* Atenção!!! Detalhe do sinal ">" ref. ao elemento imediato */
 #textoDestaque>p {
-    color: var(--preto);
+    color: var(--branco);
     font-size: 1.7em;
-    margin-bottom: 25px;
-    
+    margin-bottom: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
 }
 
 .topicos {
@@ -202,13 +203,15 @@ main h2 {
 }
 
 .topicos img {
-    margin-right: 20px;
-    margin-left: 50px;  
+    margin-right: 10px;
+    margin-left: 60px;
 }
 
 .topicos p {
     font-weight: 600;
     color: #000;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.1em;
 }
 
 /********* Sobre ***********/
@@ -222,12 +225,13 @@ main h2 {
     padding: 50px 15px;
     display: flex;
     flex-direction: column;
-    background-color:  #808080;
+    background-color: #808080;
 }
 
 #sobre h2,
 p {
     color: var(--branco);
+    
 }
 
 #sobre h2 {
@@ -236,6 +240,7 @@ p {
 
 #sobre p {
     margin-bottom: 20px;
+    
 }
 
 #video iframe {
@@ -276,9 +281,10 @@ p {
     }
 
     .topicos img {
-        margin-right: 20px;
-        margin-left: 170px;  
+        margin-right: 10px;
+        margin-left: 240px;
     }
+
     /********* Sobre **********/
     #video iframe {
         width: 560px;
@@ -337,6 +343,11 @@ p {
     #textoDestaque h2 {
         font-size: 2em;
     }
+
+    .topicos img {
+        margin-right: 10px;
+        margin-left: 270px;
+    }
 }
 
 /*FIM*/
@@ -373,116 +384,123 @@ p {
 
     .topicos img {
         margin-right: 20px;
-        margin-left: 350px;  
+        margin-left: 400px;
 
-}
-
-/*FIM*/
-
-/* PCs / Notebooks */
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1640px;
-        justify-content: space-around;
-        align-items: center;
-        /*  background-color: #87CEEB; */
-        /* cabeçalho */
     }
 
-    header {
-        height: 150px;
-    }
+    /*FIM*/
 
-    #logo img {
-        width: 140px;
-        height: 140px;
-    }
+    /* PCs / Notebooks */
+    @media (min-width: 1200px) {
+        .container {
+            max-width: 1640px;
+            justify-content: space-around;
+            align-items: center;
+            /*  background-color: #87CEEB; */
+            /* cabeçalho */
+        }
 
-    /* transformação do menu */
-    label {
-        display: none;
-    }
+        header {
+            height: 150px;
+        }
 
-    nav ul {
-        width: 100%;
-        height: auto;
-        position: static;
-        background-color: transparent;
-        /* remover a cor do backcolor*/
-    }
+        #logo img {
+            width: 140px;
+            height: 140px;
+        }
 
-    nav ul li {
-        float: left;
-        border: 0;
-    }
+        /* transformação do menu */
+        label {
+            display: none;
+        }
 
-    nav ul li {
-        color: var(--azul)
-    }
+        nav ul {
+            width: 100%;
+            height: auto;
+            position: static;
+            background-color: transparent;
+            /* remover a cor do backcolor*/
+        }
 
-    nav ul li a:hover {
-        color: var(--vermelho);
-    }
+        nav ul li {
+            float: left;
+            border: 0;
+        }
 
-    main h1 {
-        font-size: 6em;
-    }
+        nav ul li {
+            color: var(--azul)
+        }
 
-    main h2 {
-        font-size: 3.5em;
-        margin-top: 30px;
-    }
+        nav ul li a:hover {
+            color: var(--vermelho);
+        }
 
-    /*********** Destaque ***********/
-    /*   #destaque {
+        main h1 {
+            font-size: 6em;
+        }
+
+        main h2 {
+            font-size: 3.5em;
+            margin-top: 30px;
+        }
+
+
+
+
+        /*********** Destaque ***********/
+        /*   #destaque {
 
         /***** Destaque *****/
-    #imagemDestaque img {
-        width: 440px;
-        height: 440px;
+        #imagemDestaque img {
+            width: 440px;
+            height: 440px;
 
 
-        /* O código abaixo fixa o banner (efeito parallax) */
-        background-attachment: fixed;
+            /* O código abaixo fixa o banner (efeito parallax) */
+            background-attachment: fixed;
+        }
+
+        .topicos img {
+            margin-right: 20px;
+            margin-left: 350px;
+        }
+
+        /******sobre******/
+        #sobre .container {
+            flex-direction: row;
+            align-items: center;
+        }
+
+        #video iframe {
+            margin: 0px 0px 0px 20px;
+        }
+
+
+        
     }
 
-    .topicos img {
-        margin-right: 20px;
-        margin-left: 350px;
+
+
+
+    /*FIM*/
+
+    /* Telas FullHD / 4k / SmartTV */
+    @media (min-width: 1400px) {
+
+        /***** cabeçalho ******/
+        .container {
+            max-width: 1360px;
+            /*  background-color: (#87CEEB); */
+        }
+
+        header {
+            height: 200px;
+        }
+
+        #logo img {
+            width: 176px;
+            height: 176px;
+        }
+
     }
-
-    /******sobre******/
-#sobre .container {
-    flex-direction: row;
-    align-items: center;
-}
-
-#video iframe {
-    margin: 0;
-}
-}
-
-
-
-
-/*FIM*/
-
-/* Telas FullHD / 4k / SmartTV */
-@media (min-width: 1400px) {
-
-    /***** cabeçalho ******/
-    .container {
-        max-width: 1360px;
-        /*  background-color: (#87CEEB); */
-    }
-
-    header {
-        height: 200px;
-    }
-
-    #logo img {
-        width: 176px;
-        height: 176px;
-    }
-}
 }
