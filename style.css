@@ -69,11 +69,11 @@ body {
 
 .card p {
     text-align: left;
-    padding: 10px 30px 10px 30px;
+    padding: 5px 40px 10px 40px;
 }
 
 .card a {
-    padding: 4px 70px;
+    padding: 3px 60px;
     /*border: 0;*/
     background-color: rgb(219, 213, 213);
     color: #000000;
