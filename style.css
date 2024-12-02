@@ -19,10 +19,7 @@
     border: 0;
 }
 
-
-
-
-/* Layout >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+/* Layout >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 body {
     font-family: "Arima", sans-serif;
     font-size: 1em;
@@ -34,7 +31,7 @@ body {
     margin: 0 auto;
     /* centralizar o bloco */
     display: flex;
-    /*justify-content: space-between;*/
+    justify-content: space-between;
     /*align-items: center;*/
 }
 
@@ -52,10 +49,9 @@ body {
     margin-top: 20px;
 }
 
+/* FIM DO LAYOUT<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 
-/* FIM DO LAYOUT<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
-
-/* Smartphone Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+/* Smartphone Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>*/
 /************ Cabeçalho ***********/
 header {
     height: 100px;
@@ -88,26 +84,25 @@ label {
 }
 
 nav ul {
-    height: 100vh;
-    /* 100vh = 100% altura da tela*/
-    background-color: rgba(173, 216, 230, 0.8);
     list-style: none;
-    /* Revover bullets */
-    width: 55%;
+    background-color: rgba(176, 205, 223, 0.9);
+    height: 100vh;
     position: fixed;
+    width: 50%;
     top: 100px;
     right: -55%;
-    transition: all 0.5s;
+    transition: all 0.9s;
 }
 
 nav ul li {
     padding: 15px 20px;
-    border-bottom: 1px solid var(--branco);
+    border-bottom: 1px solid var(--preto);
     text-align: right;
 }
 
 nav ul li a {
     color: var(--preto);
+    font-size: 1.3em;
     text-decoration: none;
     /* remover o sublinhado */
 }
@@ -116,7 +111,7 @@ nav ul li a {
 
 /******** Banner *********/
 main {
-    height: 60vh;
+    height: 55vh;
     /* ajuste e largura do banner*/
     background: url(img/banner\ fixo.jpg);
     background-size: cover;
@@ -130,18 +125,22 @@ main {
 main h1,
 h2 {
     color: var(--branco);
-    text-shadow: #000 0.05em 0.05em 0.05em;
+    text-shadow: #000 0.09em 0.09em 0.05em;
     /* efeito de sombra*/
 }
 
 main h1 {
+    color: var(--branco);
+    font-family: "Arima", sans-serif;
     font-size: 3em;
+    font-weight: 700;
 }
 
 main h2 {
+    color: var(--branco);
     font-size: 2em;
     margin-top: 20px;
-    font-weight: 800;
+    font-weight: 500;
 }
 
 /******** Destaque **********/
@@ -151,7 +150,7 @@ main h2 {
     background-position: center;
     /*background-attachment: fixed;*/
     /* Espaçamento para não encostar na borda do dispositivo */
-    padding: 90px 15px;
+    padding: 40px 30px;
 }
 
 /* Atenção!!! Organizando o conteiner após o destaque, o estilo é aplicado apenas ao container da seçao de destaque*/
@@ -160,8 +159,8 @@ main h2 {
     align-items: center;
 }
 
-/*para esconder a imagem usamos display: nome no container da imagem | para exibir novamente em telas maiores, usamos "display: block" */
-/*#imagemDestaque{
+/*para esconder a imagem usamos display: nome no container da imagem | para exibir novamente em telas maiores, usamos "display: block"
+#imagemDestaque{
     display: none;
 }*/
 #imagemDestaque img {
@@ -169,50 +168,43 @@ main h2 {
     height: 200px;
     /* Arredondar uma imagem quadrada */
     border-radius: 50%;
-
 }
 
 #textoDestaque {
-    font-size: 1em;
     color: var(--branco);
-    text-align: center;
-
-
 }
 
 #textoDestaque h2 {
     font-size: 2em;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     text-align: center;
-
 }
 
 /* Atenção!!! Detalhe do sinal ">" ref. ao elemento imediato */
 #textoDestaque>p {
-    color: var(--branco);
-    font-size: 1.7em;
-    margin-bottom: 30px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
+    font-size: 1.4em;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-family: "Arima", sans-serif;
 }
 
 .topicos {
     display: flex;
     align-items: center;
-    margin-top: 30px;
-    text-align: center;
+    margin-top: 20px;
+    /*text-align: center;*/
 }
 
 .topicos img {
-    margin-right: 10px;
-    margin-left: 60px;
+    margin-left: 50px;
 }
 
 .topicos p {
-    font-weight: 600;
-    color: #000;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 1.1em;
+    font-weight: 700;
+    color: #000000;
+    font-family: "Arima", sans-serif;
+    font-size: 1.3em;
 }
 
 /********* Sobre ***********/
@@ -223,73 +215,85 @@ main h2 {
 }
 
 #sobre {
-    padding: 50px 15px;
-    display: flex;
-    flex-direction: column;
-    background-color: #808080;
+    padding: 30px 20px;
+    background-color: #b0cddf;
 }
 
 #sobre h2,
 p {
     color: var(--branco);
-    
+
 }
 
 #sobre h2 {
     margin-bottom: 20px;
+    font-size: 2em;
+    text-align: center;
 }
 
 #sobre p {
     margin-bottom: 20px;
-    
+    font-size: 1em;
+    text-align: center;
 }
 
 #video iframe {
-    width: 100%;
+    width: 340px;
     height: 191px;
+    margin-top: 10px;
 }
 
-/************** Faixa de destaque ********/
-#faixaDestaque{
+/******** Faixa de destaque ********/
+#faixaDestaque {
     background: url(img/fundo4.png);
     background-size: cover;
     background-position: center;
-    padding: 50px 15px;
+    padding: 30px 20px;
 }
 
-#faixaDestaque .container{
+#faixaDestaque .container {
     flex-direction: column;
 }
 
-#imagemFaixa img{
-    width: 256px;
-    height: 256px;
+#imagemFaixa img {
+    width: 150px;
+    height: 150px;
 }
 
-#textoFaixa h2{
+#textoFaixa h2 {
     color: var(--roxo);
     margin-bottom: 15px;
+    font-size: 2em;
 }
 
-#textoFaixa p{
-    margin-bottom: 50px;
+#textoFaixa p {
+    margin-bottom: 30px;
 }
-
 
 /* FIM DO SMARTPHONE PORTRAIT*/
 
 
-/* Smartphone Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+/* Smartphone Landscape >>>>>>>>>>>>*/
 @media (min-width: 576px) {
 
-    /* Cabeçalho */
-    #logo img {
-        margin: 10px 0px 0px 0px;
-    }
-
+    /****** Layout ******/
     .container {
         max-width: 670px;
-        /*  background-color: #87CEEB; */
+    }
+
+    /***** Cabeçalho *****/
+    nav ul {
+        right: -30%;
+        width: 30%;
+    }
+
+    /****** Banner ******/
+    main {
+        height: 90vh;
+    }
+
+    main h1 {
+        font-size: 3em;
     }
 
     /********* Destaque **********/
@@ -298,8 +302,7 @@ p {
     }
 
     #imagemDestaque {
-        margin-right: 60px;
-        margin-top: 80px;
+        margin-right: 50px;
     }
 
     #imagemDestaque img {
@@ -308,8 +311,7 @@ p {
     }
 
     .topicos img {
-        margin-right: 10px;
-        margin-left: 240px;
+        margin-left: 200px;
     }
 
     /********* Sobre **********/
@@ -317,8 +319,6 @@ p {
         width: 560px;
         height: 315px;
     }
-
-
 }
 
 /*FIM SMARTPHONE LANDSCAPE*/
@@ -326,234 +326,185 @@ p {
 /* Tablet Portrait */
 @media (min-width: 768px) {
 
-    /****** cabeçalho *******/
+    /****** Layout *******/
     .container {
-        max-width: 770px;
-        /* background-color: #87CEEB; */
-
-    }
-
-    header {
-        height: 110px;
-    }
-
-    #logo img {
-        width: 100px;
-        height: 100px;
-        margin: 10px 0px 0px 0px;
-    }
-
-    nav ul {
-        top: 110px;
-        width: 50%;
-        right: -50%;
+        max-width: 720px;
     }
 
     /* Banner */
+
+    main {
+        height: 60vh;
+    }
 
     main h1 {
         font-size: 4em;
     }
 
     main h2 {
-        font-size: 2.5em;
-        margin-top: 30px;
+        font-size: 3em;
+        margin-bottom: 30px;
     }
 
     /***** Destaque *****/
     #imagemDestaque img {
-        width: 300px;
-        height: 300px;
-        margin-left: 30px;
-    }
-
-    #textoDestaque h2 {
-        font-size: 2em;
+        width: 440px;
+        height: 440px;
     }
 
     .topicos img {
-        margin-right: 10px;
-        margin-left: 290px;
+        margin-left: 230px;
     }
 }
 
 /*FIM*/
 
-
-
-
 /* Tablet Landscape */
 @media (min-width: 992px) {
 
-    /* cabeçalho */
+    /* Layout */
     .container {
-        max-width: 1030px;
-        /*  background-color: #87CEEB; */
-
+        max-width: 960px;
     }
 
-    #logo img {
-        width: 110px;
-        height: 100px;
-        margin: 10px 0px 0px 0px;
+    /****** Banner ******/
+    main {
+        height: 70vh;
     }
 
-    #imagemDestaque {
-        margin-right: 70px;
-        margin-top: 70px;
-        margin-left: 70px;
+    /***** Destaque *****/
+
+    #textoDestaque h2 {
+        font-size: 4em;
+        margin-bottom: 10px;
     }
 
-    #imagemDestaque img {
-        width: 380px;
-        height: 380px;
+    #textoDestaque p {
+        font-size: 2em;
+        margin-bottom: 10px;
     }
 
     .topicos img {
-        margin-right: 20px;
-        margin-left: 400px;
-
+        margin-left: 330px;
     }
 
-    /*FIM*/
-
-    /* PCs / Notebooks */
-    @media (min-width: 1200px) {
-        .container {
-            max-width: 1640px;
-            justify-content: space-around;
-            align-items: center;
-            /*  background-color: #87CEEB; */
-            /* cabeçalho */
-        }
-
-        header {
-            height: 150px;
-        }
-
-        #logo img {
-            width: 140px;
-            height: 140px;
-        }
-
-        /* transformação do menu */
-        label {
-            display: none;
-        }
-
-        nav ul {
-            width: 100%;
-            height: auto;
-            position: static;
-            background-color: transparent;
-            /* remover a cor do backcolor*/
-        }
-
-        nav ul li {
-            float: left;
-            border: 0;
-        }
-
-        nav ul li {
-            color: var(--azul)
-        }
-
-        nav ul li a:hover {
-            color: var(--vermelho);
-        }
-
-        main h1 {
-            font-size: 6em;
-        }
-
-        main h2 {
-            font-size: 3.5em;
-            margin-top: 30px;
-        }
-
-
-
-
-        /*********** Destaque ***********/
-        /*   #destaque {
-
-        /***** Destaque *****/
-        #imagemDestaque img {
-            width: 440px;
-            height: 440px;
-
-
-            /* O código abaixo fixa o banner (efeito parallax) */
-            background-attachment: fixed;
-        }
-
-
-        /******** Destaque **********/
-#destaque {
-    background: url(img/fundo4.png);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    /* Espaçamento para não encostar na borda do dispositivo */
-    padding: 90px 15px;
 }
 
+/*FIM*/
 
-        .topicos img {
-            margin-right: 20px;
-            margin-left: 350px;
-        }
+/* PCs / Notebooks */
+@media (min-width: 1200px) {
 
-        /******sobre******/
-        #sobre .container {
-            flex-direction: row;
-            align-items: center;
-        }
-
-        #video iframe {
-            margin: 0px 0px 0px 20px;
-        }
-
-        /***** Faixa de destaque *****/
-        #faixaDestaque{
-            background-attachment: fixed;
-        }
-
-        #faixaDestaque .container{
-            flex-direction: row-reverse;
-            align-items: center;
-        }
-
-        #imagemFaixa img{
-            width: 320px;
-            height: 320px;
-        }
-
-        
+    /****** Layout ******/
+    .container {
+        max-width: 1170px; 
+        align-items: center;  
     }
 
+    /* cabeçalho */
+    header {
+        height: 120px;
+    }
 
+    #logo img {
+        width: 100px;
+        height: 100px;
+    }
 
+    /* transformação do menu */
+    label {
+        display: none;
+    }
 
-    /*FIM*/
+    nav ul {
+        margin-top: 25px;
+        width: 100%;
+        height: auto;
+        position: static;
+        /* remover a cor do backcolor*/
+        background-color: transparent;
+    }
 
-    /* Telas FullHD / 4k / SmartTV */
-    @media (min-width: 1400px) {
+    nav ul li {
+        float: left;
+        border: 0;
+    }
 
-        /***** cabeçalho ******/
-        .container {
-            max-width: 1360px;
-            /*  background-color: (#87CEEB); */
-        }
+    nav ul li {
+        color: var(--preto)
+    }
 
-        header {
-            height: 200px;
-        }
+    nav ul li a:hover {
+        color: var(--vermelho);
+    }
 
-        #logo img {
-            width: 176px;
-            height: 176px;
-        }
+    /****** Banner ******/
+    main h1 {
+        font-size: 5em;
+    }
 
+    main h2 {
+        font-size: 3em;
+    }
+
+    /*********** Destaque ***********/
+    #destaque {
+        /* O código abaixo fixa o banner (efeito parallax) */
+        background-attachment: fixed;
+    }
+
+    .topicos img {
+        margin-left: 420px;
+    }
+
+    /******sobre******/
+    #sobre .container {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #video iframe {
+        margin-left: 20px;
+
+    }
+
+    /***** Faixa de destaque *****/
+    #faixaDestaque {
+        background-attachment: fixed;
+    }
+
+    #faixaDestaque .container {
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    #imagemFaixa img {
+        width: 200px;
+        height: 200px;
     }
 }
+/* Fim | PCs / Notebooks >>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+/* Telas Grandes (FullHD / 4K / SmartTV) >>>>>>>>>>>*/
+@media (min-width: 1400px) {
+
+    /****** Layout ******/
+    .container {
+        max-width: 1360px;
+        /* background-color: #7d5b8c; */
+    }
+
+    /****** Banner ******/
+    main {
+        height: 100vh;
+    }
+
+    main h1 {
+        font-size: 6.5em;
+    }
+
+    main h2 {
+        font-size: 4em;
+    }
+}
+/* Fim | Telas Grandes (FullHD / 4K / SmartTV) >>>>>*/
