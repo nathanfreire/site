@@ -294,7 +294,7 @@ p {
 #faixaDestaque {
     background: url(img/fundo4.png);
     background-size: cover;
-    display: flex;
+    
     background-position: center;
     padding: 30px 20px;
 }
@@ -558,11 +558,13 @@ p {
     #faixaDestaque .container {
         flex-direction: row-reverse;
         align-items: center;
+        margin-left: 150px;
     }
 
     #imagemFaixa img {
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
+        margin-right: 200px;
     }
 }
 /* Fim | PCs / Notebooks >>>>>>>>>>>>>>>>>>>>>>>>>>>*/
