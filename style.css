@@ -20,6 +20,11 @@
 }
 
 /* Layout>>>>>>>>>>>>>>>>>>>>*/
+html {
+    /* Rolagem suave do conteudo */
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Arima", sans-serif;
     font-size: 1em;
@@ -49,11 +54,15 @@ body {
     margin-top: 20px;
 }
 
+#conteudo{
+    background-color: #a19b9b;
+}
+
 .card {
     width: 338px;
     height: 560px;
     margin-top: 15px;
-    background-color: var(--roxo);
+    background-color: rgb(96, 147, 190);
     border: 1px solid var(--preto);
     border-radius: 25px;
     text-align: center;
@@ -61,6 +70,8 @@ body {
 
 .card img {
     border-radius: 25px 25px 0px 0px;
+    /*width: ;
+    height: ;*/
 }
 
 .card h3 {
@@ -77,6 +88,12 @@ body {
     /*border: 0;*/
     background-color: rgb(219, 213, 213);
     color: #000000;
+}
+
+#topo {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
 }
 
 /* FIM DO LAYOUT<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
