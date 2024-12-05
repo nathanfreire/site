@@ -347,6 +347,35 @@ p {
     justify-content: center;
 }
 
+/* rodapé */
+address{
+    padding: 35px 0px;
+    background-color: #ADD8E6;
+    color: white;
+    
+}
+
+address a{
+    text-decoration: none;
+    color: #FFF;
+}
+
+address img {
+    padding: 15px;
+}
+
+#iconeLocal {
+    display: none;
+}
+
+#googleMaps {
+    margin: 30px 0px 15px 0px;
+    display: none;
+}
+
+
+
+
 /* FIM DO SMARTPHONE PORTRAIT*/
 
 
