@@ -96,6 +96,16 @@ body {
     bottom: 10px;
 }
 
+.Flex5 {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.Flex6 {
+    display: flex;
+    justify-content: space-around;
+}
+
 /* FIM DO LAYOUT<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 
 /* Smartphone Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>*/
@@ -349,8 +359,8 @@ p {
 
 /* rodapé */
 address{
-    padding: 35px 0px;
-    background-color: #ADD8E6;
+    padding: 35px 10px 50px 10px;
+    background-color: #000000;
     color: white;
     
 }
@@ -373,7 +383,15 @@ address img {
     display: none;
 }
 
+footer {
+    padding: 50px;
+    background-color:#7a7878;
+    text-align: center;
+}
 
+#social {
+    margin-bottom: 20px;
+}
 
 
 /* FIM DO SMARTPHONE PORTRAIT*/
@@ -424,6 +442,13 @@ address img {
     #video iframe {
         width: 560px;
         height: 315px;
+    }
+
+    /* Rodapé */
+    .Flex5 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
     }
 }
 
@@ -564,6 +589,10 @@ address img {
         background-attachment: fixed;
     }
 
+    #destaque .container{
+        justify-content: center;
+
+    }
     .topicos img {
         margin-left: 420px;
     }
@@ -595,6 +624,24 @@ address img {
         height: 150px;
         margin-right: 200px;
     }
+
+ /* Rodapé */
+ #iconeLocal{
+    display: inline;
+ }
+
+ #iconeMapa{
+    display: none;
+ }
+
+#googleMaps {
+    display: inline;
+}
+
+.Flex6 {
+    flex-direction: row-reverse;
+}
+
 }
 /* Fim | PCs / Notebooks >>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
